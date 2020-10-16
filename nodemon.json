@@ -1,6 +1,7 @@
 {
   "watch": [
     "bin/*",
-    "lib/*"
+    "lib/*",
+    "views/*"
   ]
 }

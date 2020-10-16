@@ -407,7 +407,11 @@
               wrapperEl = $('<div class="preformatted"></div>')
             }
 
-            rowEl.append(columnEl.append(wrapperEl.append(JSONRender(value))))
+            if(typeof value === 'object' && value !== null && value.hasOwnProperty('type') && value.type == "Buffer"){
+              rowEl.append(columnEl.append(wrapperEl.append(JSONRender(JSON.parse(String.fromCharCode.apply(null, new Uint16Array(value.data)))))))
+            }else{
+              rowEl.append(columnEl.append(wrapperEl.append(JSONRender(value))))
+            }
           }
 
           return rowEl

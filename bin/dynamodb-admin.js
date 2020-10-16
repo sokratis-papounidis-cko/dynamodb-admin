@@ -24,8 +24,8 @@ parser.addArgument(['-o', '--open'], {
 
 parser.addArgument(['-p', '--port'], {
   type: 'int',
-  defaultValue: 8001,
-  help: 'Port to run on (default: 8001)',
+  defaultValue: 8011,
+  help: 'Port to run on (default: 8011)',
 })
 
 const args = parser.parseArgs()
